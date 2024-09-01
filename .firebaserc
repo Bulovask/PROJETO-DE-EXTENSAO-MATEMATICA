@@ -1,5 +1,19 @@
 {
   "projects": {
     "default": "projeto-de-extensao-matematica"
-  }
+  },
+  "targets": {
+    "projeto-de-extensao-matematica": {
+      "hosting": {
+        "admin": [
+          "projeto-de-extensao-matematica"
+        ],
+        "user": [
+          "extensao-revisao-de-matematica"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
