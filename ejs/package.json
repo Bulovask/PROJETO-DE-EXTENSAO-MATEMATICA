@@ -9,12 +9,14 @@
     "build-user": "node build.js user",
     "build-admin": "node build.js admin",
     "build-user-local": "node build.js user local",
-    "build-admin-local": "node build.js admin local"
+    "build-admin-local": "node build.js admin local",
+    "watch": "node watch.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chokidar": "^3.6.0",
     "ejs": "^3.1.10"
   }
 }
