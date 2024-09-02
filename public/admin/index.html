@@ -20,9 +20,55 @@
     <script defer src="/__/firebase/10.13.1/firebase-remote-config-compat.js"></script>
     <!-- <script defer src="/__/firebase/10.13.1/firebase-performance-compat.js"></script> -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <script defer src="http://localhost:8000//js/script.js"></script>
+    <script defer src="http://localhost:8000/js/ui-config.js"></script>
+    <script defer src="http://localhost:8000/js/app.js"></script>
+
+    <link rel="stylesheet" href="http://localhost:8000/css/style.css">
   </head>
   <body>
-    
+    <header id="main-header">
+  <nav>
+    <div>
+      <a href="/">Início</a>
+      <a href="/inscricoes">Inscrições</a>
+      <a href="/matriculas">Matrículas</a>
+    </div>
+    <div>
+      <a id="username" href="/perfil">Não conectado</a>
+      <button id="toggle-menu-btn" type="button">MENU</button>
+    </div>
+  </nav>
+</header>
+    <aside id="side-menu">
+  <nav class="nav-vertical">
+    <a href="/inscricoes">Inscrições</a>
+    <a href="/matriculas">Matrículas</a>
+    <a href="/perfil">Perfil</a>
+    <a href="/sair">Sair</a>
+  </nav>
+</aside>
+    <div id="content">
+      <main>
+  <section class="app-section" data-pathname="/">
+  <h1>Início</h1>
+  <p>Não implementado</p>
+</section>
+  <section class="app-section" data-pathname="/inscricoes">
+  <h1>Inscrições</h1>
+  <p>Não implementado</p>
+</section>
+  <section class="app-section" data-pathname="/matriculas">
+  <h1>Matrículas</h1>
+  <p>Não implementado</p>
+</section>
+  <section class="app-section" data-pathname="/perfil">
+  <h1>Perfil</h1>
+  <p>Não implementado</p>
+</section>
+</main>
+      <footer>
+  <span>Feito por Bulovask!</span>
+</footer>
+    </div>
   </body>
 </html>

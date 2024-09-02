@@ -1,0 +1,154 @@
+body {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: min-content 1fr;
+  gap: 3px;
+  box-sizing: border-box;
+  background-color: #8b530e;
+}
+
+body,
+button {
+  font-size: 18px;
+  font-family: Calibri;
+}
+
+#main-header {
+  grid-column: 1 / 3;
+  background-color: #ea5;
+}
+
+#side-menu {
+  background-color: #ea5;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+main {
+  position: relative;
+  background-color: #fdb;
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #eca;
+}
+
+#side-menu,
+header,
+main,
+footer {
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav.nav-vertical {
+  flex-direction: column;
+}
+
+nav a {
+  padding: 1px 3px;
+  margin: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #8885;
+  color: #222;
+}
+
+nav a:active {
+  background-color: #3338;
+  color: #fff;
+}
+
+#toggle-menu-btn {
+  display: none;
+  margin: 0;
+  border: none;
+  background-color: #8884;
+  color: #222;
+  font-weight: bold;
+}
+
+#toggle-menu-btn:hover {
+  background-color: #5554;
+}
+
+#toggle-menu-btn:active {
+  background-color: #3334;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  #side-menu {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 2px 0 5px #0009;
+  }
+
+  #side-menu.show {
+    display: block;
+  }
+
+  #content {
+    grid-column: 1 / 3;
+  }
+
+  #toggle-menu-btn {
+    display: inline-block;
+  }
+}
+
+.app-section {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.app-section.hidden {
+  display: none;
+}
+
+.item-curso {
+  position: relative;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 1px 1px 3px #0008;
+  margin-bottom: 10px;
+}
+
+.item-curso h2 {
+  margin: 0;
+  padding-right: 60px;
+}
+
+.item-curso .editar-curso-button {
+  position: absolute;
+  right: 5px;
+  background-color: #55c;
+  color: #fff;
+  text-decoration: none;
+  padding: 2px 4px;
+  border-radius: 5px;
+}

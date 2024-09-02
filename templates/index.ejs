@@ -25,9 +25,17 @@
     <script defer src="/__/firebase/10.13.1/firebase-remote-config-compat.js"></script>
     <!-- <script defer src="/__/firebase/10.13.1/firebase-performance-compat.js"></script> -->
     <script defer src="/__/firebase/init.js<%= local ? '?useEmulator=true' : '' %>"></script>
-    <script defer src="<%= jsFiles + 'script' + (!local ? '.min.js' : '.js') %>"></script>
+    <script defer src="<%= jsFiles + 'ui-config' + (!local ? '.min.js' : '.js') %>"></script>
+    <script defer src="<%= jsFiles + 'app' + (!local ? '.min.js' : '.js') %>"></script>
+
+    <link rel="stylesheet" href="<%= cssFiles + 'style' + (!local ? '.min.css' : '.css') %>">
   </head>
   <body>
-    
+    <%- include('header.ejs') %>
+    <%- include('sidemenu.ejs') %>
+    <div id="content">
+      <%- include(type + '/main.ejs') %>
+      <%- include('footer.ejs') %>
+    </div>
   </body>
 </html>

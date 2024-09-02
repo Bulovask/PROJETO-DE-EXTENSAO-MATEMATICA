@@ -4,8 +4,8 @@ const ejs = require('ejs');
 
 const args = process.argv.slice(2);
 
-const prodURL = 'https://cdn.jsdelivr.net/gh/Bulovask/PROJETO-DE-EXTENSAO-MATEMATICA/public/res/';
-const devURL = 'http://localhost:8000/';
+const prodURL = 'https://cdn.jsdelivr.net/gh/Bulovask/PROJETO-DE-EXTENSAO-MATEMATICA/public/res';
+const devURL = 'http://localhost:8000';
 
 const templatesDir = '../templates';
 const outputDir = '../public';
