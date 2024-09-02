@@ -11,7 +11,8 @@
     "build-user-local": "node build.js user local",
     "build-admin-local": "node build.js admin local",
     "watch": "node watch.js",
-    "http-server": "http-server ../public/res -p 8000"
+    "http-server": "http-server ../public/res -p 8000",
+    "run-local": "node run-local.js"
   },
   "keywords": [],
   "author": "",
