@@ -1,10 +1,11 @@
 const chokidar = require('chokidar');
 const { exec } = require('child_process');
+const path = require('path');
 
 const objectsPath = [
-  './templates/user/**/*.ejs',
-  './templates/admin/**/*.ejs',
-  './templates/*.ejs'
+  `${__dirname}/../templates/user/**/*.ejs`,
+  `${__dirname}/../templates/admin/**/*.ejs`,
+  `${__dirname}/../templates/*.ejs`
 ];
 
 function build(type) {
@@ -15,7 +16,7 @@ function build(type) {
   });
 }
 
-console.clear();
+// console.clear();
 console.log('\x1b[32mwatch.js está observando...\x1b[m\n');
 
 const watcher = chokidar.watch(objectsPath, {
@@ -23,10 +24,11 @@ const watcher = chokidar.watch(objectsPath, {
   persistent: true
 });
 
-watcher.on('change', path => {
-  console.log(`\r\x1b[35m=>\x1b[m O arquivo ${path} foi alterado`);
-  if (path.includes('user')) build('user');
-  else if (path.includes('admin')) build('admin');
+watcher.on('change', filePath => {
+  const fileRelativePath = path.relative(path.join(__dirname, '../'), filePath);
+  console.log(`\r\x1b[35m=>\x1b[m O arquivo ${fileRelativePath} foi alterado`);
+  if (fileRelativePath.includes('user')) build('user');
+  else if (fileRelativePath.includes('admin')) build('admin');
   else build('');
 });
 

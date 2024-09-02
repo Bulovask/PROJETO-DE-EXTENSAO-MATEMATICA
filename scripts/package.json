@@ -1,5 +1,5 @@
 {
-  "name": "templates-ejs",
+  "name": "scripts",
   "version": "1.0.0",
   "description": "",
   "main": "build.js",
@@ -10,13 +10,15 @@
     "build-admin": "node build.js admin",
     "build-user-local": "node build.js user local",
     "build-admin-local": "node build.js admin local",
-    "watch": "node watch.js"
+    "watch": "node watch.js",
+    "http-server": "http-server ../public/res -p 8000"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chokidar": "^3.6.0",
-    "ejs": "^3.1.10"
+    "ejs": "^3.1.10",
+    "http-server": "^14.1.1"
   }
 }
